@@ -1,8 +1,8 @@
 <?php
 // $input simulate a user
 $input = new stdClass();
-$input->username = 'tguillouet';
-$input->password = '2jumeaux';
+$input->username = 'test';
+$input->password = 'test';
 
 $user = $sqlQuery->auth($input->username);
 

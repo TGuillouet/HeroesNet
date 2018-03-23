@@ -31,6 +31,12 @@ class RequestsModel {
         return $this->fetch($q);
     }   
 
+    public function getPresenceList() {
+        $q = 'SELECT CONCAT(first_name, " ", last_name) AS full_name FROM users WHERE is_here = 1';
+
+        return $this->fetch($q);
+    }
+
     /**
      * SQl Insert
      */

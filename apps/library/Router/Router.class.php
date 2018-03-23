@@ -35,8 +35,9 @@ class Router {
      */
     private function getRoute() {
         $matches = 0;
+        
         foreach ($this->routes as $route) {
-            if ('/'.$route->getRoute() == implode('/', $this->url)) {
+            if ($route->getRoute() == trim(implode('/', $this->url), "/")) {
                 $matches++;
                 $route->runRoute();
             }

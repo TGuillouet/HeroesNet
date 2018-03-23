@@ -26,6 +26,6 @@ $common->setConfigFile($configFilePath);
 $env = $common->getSections(); // ['ALL', 'TEST']
 $ini = $common->getEnv($env[1]); // Object who contain the configuration, the index of env is for the test env
 
-//var_dump($ini);
+//var_dump($ini->needViews);
 
 include _CONTROLLERS.'/router.php';
